@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sample_text"/>
+
+
+    <!--<com.achers.ascmake.com.lhz.stateprogress.StateProgressView-->
+        <!--android:id="@+id/spv_01"-->
+        <!--android:layout_width="match_parent"-->
+        <!--app:color_circle_fill="#1296db"-->
+        <!--app:color_circle_stroke="#dbdbdb"-->
+        <!--app:color_text_state="#1296db"-->
+        <!--app:is_line_radius="false"-->
+        <!--app:color_text_normal="#bfbfbf"-->
+        <!--app:color_line_state="#1296db"-->
+        <!--app:color_line_normal="#dbdbdb"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="40dp"/>-->
+
+    <TextView
+        android:id="@+id/texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1111"/>
+
+    <com.achers.ascmake.timeview.LTimeView
+        android:id="@+id/lt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:color_line_state="@color/green_master"
+        app:color_text_state="@color/green_master"
+        app:color_text_normal="@color/grey_ba"
+        app:color_line_normal="@color/grey_ba"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:mMarginTop="15dip"
+        app:lintHight="2dip"
+        />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="set"
+        android:text="set"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gets"
+        android:text="get"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="recy"
+        android:text="recy"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="web"
+        android:text="webs"/>
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+    <!--<TextView-->
+        <!--style="@style/wh"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:text="Hello World!" />-->
+
+</LinearLayout> 
