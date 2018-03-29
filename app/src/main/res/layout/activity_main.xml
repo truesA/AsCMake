@@ -74,6 +74,12 @@
         android:onClick="web"
         android:text="webs"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="BallTocher"
+        android:text="BallTocher"/>
+
     <!--<TextView-->
         <!--style="@style/wh"-->
         <!--android:layout_margin="5dp"-->

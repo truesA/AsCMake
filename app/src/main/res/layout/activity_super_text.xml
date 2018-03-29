@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.achers.ascmake.supertextviewactivity.SuperTextActivity">
+
+    <com.allen.library.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        stv:sCenterBottomTextColor="@color/colorAccent"
+        stv:sCenterBottomTextString="限额说明>>"
+        stv:sCenterTopTextString="1111"
+        stv:sCenterViewGravity="left_center"
+        stv:sCenterTextString="liuhaom"
+        stv:sLeftBottomTextString="招商银行（8888）"
+        stv:sLeftTopTextString="银行卡支付"
+        stv:sLeftViewGravity="left_center"
+        stv:sUseRipple="true"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/name_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="走势图"
+            android:textSize="13sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"/>
+
+</LinearLayout>

@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">AsCMake</string>
     <string name="title_activity_webs">WebsActivity</string>
+    <string name="title_activity_ball_tocher">BallTocherActivity</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
 </resources>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.achers.ascmake.supertextviewactivity.MaterialDialogsActivity;
 import com.achers.ascmake.timeview.LTimeView;
 import com.achers.ascmake.web.WebAsActivity;
 import com.achers.ascmake.web.WebChonzhiAcvitity;
@@ -225,7 +226,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent =new Intent(this, PopWin.class);
         startActivity(intent);
     }
-
+    public void BallTocher(View view){
+        Intent intent =new Intent(this, MaterialDialogsActivity.class);
+        startActivity(intent);
+    }
 
 
 

@@ -16,6 +16,7 @@ import android.webkit.WebView;
 import com.achers.ascmake.CustomRecyclerView;
 import com.achers.ascmake.CustomSGLayoutManager;
 import com.achers.ascmake.R;
+import com.achers.ascmake.view.TouchLinearLayout;
 
 import java.util.ArrayList;
 

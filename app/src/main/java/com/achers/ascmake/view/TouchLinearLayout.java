@@ -1,4 +1,4 @@
-package com.achers.ascmake.web;
+package com.achers.ascmake.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

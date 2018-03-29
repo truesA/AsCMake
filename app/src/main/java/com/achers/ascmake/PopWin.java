@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.achers.ascmake.dapter.ConstellationAdapter;
 import com.achers.ascmake.dapter.GirdDropDownAdapter;
@@ -46,11 +47,20 @@ public class PopWin extends AppCompatActivity {
 
     private int constellationPosition = 0;
 
+    private TextView time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
         initView();
+        //time=findViewById(R.id.time);
+
+       String tmieString= DataUttil.getTitleDay("2018-03-16 10:10:30");
+        Toast.makeText(this,tmieString,Toast.LENGTH_LONG).show();
+        System.out.print(tmieString);
+      //  time.setText(tmieString);
+
     }
 
     private void initView() {

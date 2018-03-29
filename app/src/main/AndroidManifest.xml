@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".web.WebAsActivity" />
-        <activity android:name=".RecyviewTxActivity"></activity>
+        <activity android:name=".RecyviewTxActivity" />
         <activity android:name=".web.WebChonzhiAcvitity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -38,10 +39,14 @@
 
                 <data android:scheme="shopal-c" />
             </intent-filter>
-            </activity>
-
-        <activity android:name=".PopWin"
-            android:theme="@style/NoTitleTranslucentTheme"  />
+        </activity>
+        <activity android:name=".PopWin" />
+        <activity
+            android:name=".BallTocherActivity"
+            android:label="@string/title_activity_ball_tocher"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".supertextviewactivity.SuperTextActivity" />
+        <activity android:name=".supertextviewactivity.MaterialDialogsActivity"></activity>
     </application>
 
 </manifest>
