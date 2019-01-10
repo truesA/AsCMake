@@ -3,124 +3,165 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/sample_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sample_text"/>
+        android:layout_height="wrap_content" />
 
 
     <!--<com.achers.ascmake.com.lhz.stateprogress.StateProgressView-->
-        <!--android:id="@+id/spv_01"-->
-        <!--android:layout_width="match_parent"-->
-        <!--app:color_circle_fill="#1296db"-->
-        <!--app:color_circle_stroke="#dbdbdb"-->
-        <!--app:color_text_state="#1296db"-->
-        <!--app:is_line_radius="false"-->
-        <!--app:color_text_normal="#bfbfbf"-->
-        <!--app:color_line_state="#1296db"-->
-        <!--app:color_line_normal="#dbdbdb"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="40dp"/>-->
+    <!--android:id="@+id/spv_01"-->
+    <!--android:layout_width="match_parent"-->
+    <!--app:color_circle_fill="#1296db"-->
+    <!--app:color_circle_stroke="#dbdbdb"-->
+    <!--app:color_text_state="#1296db"-->
+    <!--app:is_line_radius="false"-->
+    <!--app:color_text_normal="#bfbfbf"-->
+    <!--app:color_line_state="#1296db"-->
+    <!--app:color_line_normal="#dbdbdb"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="40dp"/>-->
+
+    <ImageView
+        android:id="@+id/iv_s"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/head_default"
+        android:transitionName="@string/image"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/bt_about"
+        android:background="@drawable/button_selector"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:text="关于" />
+
+
+    <ProgressBar
+        android:id="@+id/progress02"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:backgroundTint="@color/white"
+        android:max="100"
+        android:progress="48"
+        android:progressDrawable="@drawable/progress_vertical_style_left" />
+
+
+    <ProgressBar
+        android:id="@+id/progress03"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:max="100"
+        android:progress="48"
+        android:progressDrawable="@drawable/progress_vertical_style_right" />
 
     <TextView
         android:id="@+id/texts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1111"/>
+        android:text="1111" />
 
     <com.achers.ascmake.timeview.LTimeView
         android:id="@+id/lt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:color_line_state="@color/green_master"
-        app:color_text_state="@color/green_master"
-        app:color_text_normal="@color/grey_ba"
-        app:color_line_normal="@color/grey_ba"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        app:mMarginTop="15dip"
+        app:color_line_normal="@color/grey_ba"
+        app:color_line_state="@color/green_master"
+        app:color_text_normal="@color/grey_ba"
+        app:color_text_state="@color/green_master"
         app:lintHight="2dip"
-        />
+        app:mMarginTop="15dip" />
 
     <EditText
         android:id="@+id/et"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="set"
-        android:text="set"/>
+        android:text="set" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="gets"
-        android:text="get"/>
+        android:text="get" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="recy"
-        android:text="recy"/>
+        android:text="recy" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="web"
-        android:text="webs"/>
+        android:text="webs" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="BallTocher"
-        android:text="BallTocher"/>
+        android:text="BallTocher" />
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
     <!--<TextView-->
-        <!--style="@style/wh"-->
-        <!--android:layout_margin="5dp"-->
-        <!--android:text="Hello World!" />-->
+    <!--style="@style/wh"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:text="Hello World!" />-->
 
 </LinearLayout> 

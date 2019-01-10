@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#303F9F</color>
 
     <color name="green_master">#40b594</color>
 
@@ -19,4 +19,10 @@
     <color name="un_press_color">#9C27B0</color>
 
     <color name="transparent">#00000000</color>
+    <color name="load_success">#ffffff</color>
+    <color name="load_failure">#ffffff</color>
+    <color name="line">#f2f2f2</color>
+
+    <!--<color name="solar_background">#009988</color>-->
+    <color name="solar_background">#ffffff</color>
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.achers.ascmake.arout.AroutActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goArout"
+        android:text="go"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+
+    <TextView
+        android:id="@+id/text_html"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="111"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/head_default"
+        android:transitionName="@string/image"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goCalendarView"
+        android:text="CalendarView"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:firstDayOfWeek="3"
+        android:shownWeekCount="4"
+        android:selectedWeekBackgroundColor="#aff"
+        android:focusedMonthDateColor="#f00"
+        android:weekSeparatorLineColor="#ff0"
+        android:unfocusedMonthDateColor="#f9f"
+        android:id="@+id/calendarView" />
+
+</LinearLayout>

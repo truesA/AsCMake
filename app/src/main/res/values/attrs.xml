@@ -2,38 +2,38 @@
 <resources>
     <!--<declare-styleable name="StateProgressView">-->
 
-        <!--<attr name="color_line_normal" format="color"/>-->
-        <!--<attr name="color_line_state" format="color"/>-->
-        <!--<attr name="line_height" format="dimension"/>-->
-        <!--<attr name="color_circle_stroke" format="color"/>-->
-        <!--<attr name="color_circle_fill" format="color"/>-->
-        <!--<attr name="radius_circle_stroke" format="dimension"/>-->
-        <!--<attr name="radius_circle_fill" format="dimension"/>-->
+    <!--<attr name="color_line_normal" format="color"/>-->
+    <!--<attr name="color_line_state" format="color"/>-->
+    <!--<attr name="line_height" format="dimension"/>-->
+    <!--<attr name="color_circle_stroke" format="color"/>-->
+    <!--<attr name="color_circle_fill" format="color"/>-->
+    <!--<attr name="radius_circle_stroke" format="dimension"/>-->
+    <!--<attr name="radius_circle_fill" format="dimension"/>-->
 
-        <!--<attr name="color_text_normal" format="color"/>-->
-        <!--<attr name="color_text_state" format="color"/>-->
-        <!--<attr name="text_height" format="dimension"/>-->
-        <!--<attr name="state_height" format="dimension"/>-->
-        <!--<attr name="is_line_radius" format="boolean"/>-->
+    <!--<attr name="color_text_normal" format="color"/>-->
+    <!--<attr name="color_text_state" format="color"/>-->
+    <!--<attr name="text_height" format="dimension"/>-->
+    <!--<attr name="state_height" format="dimension"/>-->
+    <!--<attr name="is_line_radius" format="boolean"/>-->
 
     <!--</declare-styleable>-->
 
 
     <declare-styleable name="LTimeView">
         <!--设置流程线未完成颜色-->
-        <attr name="color_line_normal" format="color"/>
+        <attr name="color_line_normal" format="color" />
 
         <!--设置流程线完成颜色-->
-        <attr name="color_line_state" format="color"/>
+        <attr name="color_line_state" format="color" />
 
         <!--设置流程线完成颜色-->
-        <attr name="color_text_state" format="color"/>
+        <attr name="color_text_state" format="color" />
 
         <!--设置流程线未完成颜色-->
-        <attr name="color_text_normal" format="color"/>
+        <attr name="color_text_normal" format="color" />
 
         <!--设置流程线和文字断开颜色-->
-        <attr name="color_line_text_close" format="color"/>
+        <attr name="color_line_text_close" format="color" />
 
         <!--圆圈和文字之间的距离-->
         <attr name="mMarginTop" format="dimension" />
@@ -42,7 +42,7 @@
         <attr name="tabNames" format="reference" />
 
         <!--文本的字体大小-->
-        <attr name="android:textSize"/>
+        <attr name="android:textSize" />
 
         <!--基准线高度-->
         <attr name="lintHight" format="dimension" />
@@ -51,15 +51,75 @@
 
     <declare-styleable name="DropDownMenu">
 
-        <attr name="ddunderlineColor" format="color"/>
-        <attr name="dddividerColor" format="color"/>
-        <attr name="ddtextSelectedColor" format="color"/>
-        <attr name="ddtextUnselectedColor" format="color"/>
-        <attr name="ddmenuBackgroundColor" format="color"/>
-        <attr name="ddmaskColor" format="color"/>
-        <attr name="ddmenuTextSize" format="dimension"/>
-        <attr name="ddmenuSelectedIcon" format="reference"/>
-        <attr name="ddmenuUnselectedIcon" format="reference"/>
-        <attr name="ddmenuMenuHeightPercent" format="float"/>
+        <attr name="ddunderlineColor" format="color" />
+        <attr name="dddividerColor" format="color" />
+        <attr name="ddtextSelectedColor" format="color" />
+        <attr name="ddtextUnselectedColor" format="color" />
+        <attr name="ddmenuBackgroundColor" format="color" />
+        <attr name="ddmaskColor" format="color" />
+        <attr name="ddmenuTextSize" format="dimension" />
+        <attr name="ddmenuSelectedIcon" format="reference" />
+        <attr name="ddmenuUnselectedIcon" format="reference" />
+        <attr name="ddmenuMenuHeightPercent" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RequestIcon">
+        <attr name="icon_color" format="reference|color" />
+        <attr name="icon_size" format="dimension" />
+        <attr name="icon_style" format="enum">
+            <enum name="tick_start_circle" value="0" />
+            <enum name="tick_half_circle" value="1" />
+            <enum name="tick_end_circle" value="2" />
+        </attr>
+        <attr name="speed_multiplier" format="float" />
+    </declare-styleable>
+    <declare-styleable name="RequestButton">
+        <attr name="request_icon_spacing" format="dimension" />
+        <attr name="request_icon_color" format="color" />
+        <attr name="request_icon_size" format="dimension" />
+        <attr name="request_icon_style" format="enum">
+            <enum name="tick_start_circle" value="0" />
+            <enum name="tick_half_circle" value="1" />
+            <enum name="tick_end_circle" value="2" />
+        </attr>
+        <attr name="request_speed_multiplier" format="float" />
+        <attr name="text_default" format="string" />
+        <attr name="text_progress" format="string" />
+        <attr name="text_success" format="string" />
+        <attr name="text_failure" format="string" />
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomStatusView">
+        <attr name="progress_width" format="dimension" />
+        <attr name="progress_radius" format="dimension" />
+        <attr name="loading_color" format="color" />
+        <attr name="load_success_color" format="color" />
+        <attr name="load_failure_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="NewRequesButton">
+        <attr name="bt_text_default" format="string" />
+        <attr name="bt_text_progress" format="string" />
+        <attr name="bt_text_success" format="string" />
+        <attr name="bt_text_failure" format="string" />
+        <attr name="bt_text_color" format="color" />
+        <attr name="bt_text_size" format="dimension" />
+        <attr name="bt_text_width" format="dimension" />
+        <attr name="bt_icon_progress" format="color" />
+        <attr name="bt_icon_success" format="color" />
+        <attr name="bt_icon_failure" format="color" />
+        <attr name="bt_icon_radius" format="dimension" />
+        <attr name="bt_icon_line_width" format="dimension" />
+        <attr name="bt_request_icon_spacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="XOView">
+        <attr name="xo_status" format="integer" />
+        <attr name="xo_color" format="color" />
+
     </declare-styleable>
 </resources>

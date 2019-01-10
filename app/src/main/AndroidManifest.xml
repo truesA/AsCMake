@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.achers.ascmake">
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -10,13 +11,15 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".arout.AroutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,7 +49,38 @@
             android:label="@string/title_activity_ball_tocher"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".supertextviewactivity.SuperTextActivity" />
-        <activity android:name=".supertextviewactivity.MaterialDialogsActivity"></activity>
+        <activity android:name=".supertextviewactivity.MaterialDialogsActivity" />
+        <activity android:name=".bamboy.BamActivity" />
+        <activity android:name=".animator.AnimatorActivity" />
+        <activity android:name=".view.requestbutton.RequestButtonActivity" />
+        <!-- <activity android:name=".proxys.web.ProxyActivity" /> -->
+        <activity android:name=".proxys.web.ProxyWebActivity" />
+        <!-- <activity android:name=".jdpay.JDPayActivity"></activity> -->
+
+        <activity
+            android:name="com.jdpaysdk.author.AuthorActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- jdpauth是固定的后面的数字是appId -->
+                <!-- 此处的123456789测试使用的，如果用户已经注册需要使用自己注册的appId -->
+                <data android:scheme="jdpauthb9f8661ee5a71f5f0893930d29fb3267" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jdpaysdk.author.browser.BrowserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".components.ComponentActivity"></activity> -->
+        <activity android:name=".components.beatweb.BaseActivity" />
+        <activity android:name=".components.beatweb.BaseWebActivity" />
+        <!-- <activity android:name=".arout.AroutActivity"></activity> -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".recyclers.RecyclerMainActivity" />
+        <activity android:name=".calendar.CalendarViewMainActivity"></activity>
     </application>
 
 </manifest>

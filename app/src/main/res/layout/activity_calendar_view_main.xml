@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.achers.ascmake.calendar.CalendarViewMainActivity">
+
+
+    <TextView
+        android:id="@+id/data_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center|top"/>
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:month_view="com.achers.ascmake.calendar.SimpleMonthView"
+        app:week_bar_view="com.achers.ascmake.calendar.SolarWeekBar"
+        app:calendar_height="40dp"
+        app:current_month_text_color="#333333"
+        app:current_month_lunar_text_color="#CFCFCF"
+        app:min_year="2004"
+        app:other_month_text_color="#e1e1e1"
+        app:scheme_text="假"
+        app:scheme_text_color="#333"
+        app:scheme_theme_color="#333"
+        app:selected_text_color="#fff"
+        app:selected_lunar_text_color="#fff"
+        app:selected_theme_color="#5D89FF"
+        app:current_day_text_color="#5D89FF"
+        app:current_day_lunar_text_color="#5D89FF"
+        app:week_start_with="mon"
+        app:week_background="#fff"
+        app:month_view_show_mode="mode_only_current"
+        app:week_text_color="#111"
+        />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time"
+        android:onClick="onTime"/>
+
+
+</LinearLayout>

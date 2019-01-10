@@ -79,7 +79,7 @@ public class WheelView extends View {
     int dividerColor = 0xFFd5d5d5;
 
     // 条目间距倍数
-    float lineSpacingMultiplier = 1.6F;
+    float lineSpacingMultiplier = 2.6F;
     public boolean isLoop;
 
     // 第一条线Y坐标值
@@ -139,7 +139,7 @@ public class WheelView extends View {
         float density = dm.density; // 屏幕密度（0.75/1.0/1.5/2.0/3.0）
 
         if (density<1){//根据密度不同进行适配
-           centerContentOffset=2.4F;
+            centerContentOffset=2.4F;
         }else if (1<=density&&density<2){
             centerContentOffset = 3.6F;
         }else if (1<=density&&density<2){
@@ -164,7 +164,7 @@ public class WheelView extends View {
 
         judgeLineSpae();
 
-        initLoopView(context);
+        initWheelView(context);
     }
 
     /**
@@ -178,7 +178,7 @@ public class WheelView extends View {
         }
     }
 
-    private void initLoopView(Context context) {
+    private void initWheelView(Context context) {
         this.context = context;
         handler = new MessageHandler(this);
         gestureDetector = new GestureDetector(context, new WheelViewGestureListener(this));
@@ -210,8 +210,7 @@ public class WheelView extends View {
         paintLine = new Paint();
         paintLine.setColor(dividerColor);
         paintLine.setAntiAlias(true);
-        if(lineConfig==null){
-            lineConfig = new LineConfig();
+        if(lineConfig!=null){
             paintLine.setColor(lineConfig.getColor());
             paintLine.setAlpha(lineConfig.getAlpha());
             paintLine.setStrokeWidth(lineConfig.getThick());
@@ -394,7 +393,7 @@ public class WheelView extends View {
         } catch (ArithmeticException e) {
             Log.e("WheelView","出错了！adapter.getItemsCount() == 0，联动数据不匹配");
         }
-        if (!isLoop) {//不循环的情况
+        if (!isLoop) { //不循环的情况
             if (preCurrentIndex < 0) {
                 preCurrentIndex = 0;
             }
@@ -432,7 +431,8 @@ public class WheelView extends View {
 
         }
         //设置线可见时绘制两条线
-        if(lineConfig.isVisible()){
+        if(lineConfig!=null && lineConfig.isVisible()){
+//            float ratio  = lineConfig.getRatio();
             //绘制中间两条横线
             if (dividerType == LineConfig.DividerType.WRAP){//横线长度仅包裹内容
                 float startX;
@@ -526,7 +526,6 @@ public class WheelView extends View {
                     //让文字居中
                     float Y = maxTextHeight - centerContentOffset;//因为圆弧角换算的向下取值，导致角度稍微有点偏差，加上画笔的基线会偏上，因此需要偏移量修正一下
                     canvas.drawText(contentText, drawCenterContentStart, Y, paintCenterText);
-
                     selectedPosition= adapter.indexOf(drawItemCount[counter]);
 
                 } else {
@@ -788,10 +787,13 @@ public class WheelView extends View {
     }
 
     public void setLineConfig(LineConfig lineConfig) {
-        if(null == lineConfig){
-            lineConfig = new LineConfig();
+        if(null != lineConfig){
+            paintLine.setColor(lineConfig.getColor());
+            paintLine.setAlpha(lineConfig.getAlpha());
+            paintLine.setStrokeWidth(lineConfig.getThick());
+            this.lineConfig = lineConfig;
         }
-        this.lineConfig = lineConfig;
+
     }
     public void setUnSelectedTextColor(int textColorOut) {
         if (textColorOut != 0) {
@@ -826,6 +828,4 @@ public class WheelView extends View {
 
         }
     }
-
-
 }

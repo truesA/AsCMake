@@ -51,6 +51,7 @@ public class WebsActivity extends AppCompatActivity implements View.OnTouchListe
 
       //  mWebView.setOnTouchListener(this);
 
+
         mWebView.loadUrl("https://www.cp988.cn/my-project/run-chart/double/double.html");
 
 

@@ -8,19 +8,19 @@
     android:orientation="vertical"
     tools:context="com.achers.ascmake.supertextviewactivity.SuperTextActivity">
 
-    <com.allen.library.SuperTextView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        stv:sCenterBottomTextColor="@color/colorAccent"
-        stv:sCenterBottomTextString="限额说明>>"
-        stv:sCenterTopTextString="1111"
-        stv:sCenterViewGravity="left_center"
-        stv:sCenterTextString="liuhaom"
-        stv:sLeftBottomTextString="招商银行（8888）"
-        stv:sLeftTopTextString="银行卡支付"
-        stv:sLeftViewGravity="left_center"
-        stv:sUseRipple="true"
-        />
+    <!--<com.allen.library.SuperTextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--stv:sCenterBottomTextColor="@color/colorAccent"-->
+        <!--stv:sCenterBottomTextString="限额说明>>"-->
+        <!--stv:sCenterTopTextString="1111"-->
+        <!--stv:sCenterViewGravity="left_center"-->
+        <!--stv:sCenterTextString="liuhaom"-->
+        <!--stv:sLeftBottomTextString="招商银行（8888）"-->
+        <!--stv:sLeftTopTextString="银行卡支付"-->
+        <!--stv:sLeftViewGravity="left_center"-->
+        <!--stv:sUseRipple="true"-->
+        <!--/>-->
 
 
     <LinearLayout

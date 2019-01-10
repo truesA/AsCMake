@@ -18,7 +18,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="check"
+        android:text="check1"
         android:onClick="ck1"
         />
 
@@ -26,7 +26,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="check"
-        android:onClick="ck1"
+        android:text="check2"
+        android:onClick="ck2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check2"
+        android:onClick="ck3"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check4"
+        android:onClick="ck4"
+        />
+
+
+    <TextView
+        android:id="@+id/md_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
 </LinearLayout>

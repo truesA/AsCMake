@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.webkit.JavascriptInterface;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -70,8 +71,18 @@ public class WebAsActivity extends AppCompatActivity {
 //        extraHeaders.put("referer", "https://shop.cp988.cn");
 //        newWebView.loadUrl("https://payh5.bbnpay.com/h5pay/way.php?data=%7B%22appid%22%3A%225109201803074191%22%2C%22transid%22%3A%220041911520472381029425725400%22%2C%22paytype%22%3A1%2C%22backurl%22%3A%22https%3A%2F%2Faccount.cp988.cn%2Fapi%2Fv2%2Fnotify%2Furl%22%7D&sign=a6a6057a9b132ed811f67bfd1101d04b&signtype=MD5",extraHeaders);
         //load在线
-        newWebView.loadUrl("http://blog.csdn.net/zheng_jiao/article/details/51433462");
+        String url="<form name=\"punchout_form\" method=\"post\" action=\"https://openapi.alipay.com/gateway.do?charset=utf-8&method=alipay.trade.wap.pay&sign=X0O1CZ9Ir9DZzItd7opheRFrO9De7YhA9HC4gOT4GvMCf6STEFUbRZ1vXYvJkeSufseind6tDa%2B7aznZadrtN%2BJiMusrnhGfwCobSSmbV1T%2FTJWlCLDNg6ZJ8%2FpER%2Fh310SwrwnETheB4i1NTR7YRbPBLSY3iBRwgrBfY9eMDQeZBSlNbZMfCraaG1tG0IVR8OTgpjb6MJEoyx1ZNiv42pWsdE%2FoAC6KWcs8svhPYg%2Fl8UZCj5llJLTYiBPvcpk3O9KsSUGk74nTtNK3yy9IcLGtTp1cJuHSf9bOtlx6duP%2F3QQegTkcRY4LKBipbjcImcrGeYmFrhVJcXF12ofkBA%3D%3D&return_url=http%3A%2F%2Fpay.tomato-pay.com%2Fpay%2Fback%2Faliszryypay&notify_url=http%3A%2F%2Fpay.tomato-pay.com%2Fpay%2Fnotify%2Faliszryypay&version=1.0&app_id=2018031402370023&sign_type=RSA2&timestamp=2018-04-16+13%3A50%3A38&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=json\">\n" +
+                "<input type=\"hidden\" name=\"biz_content\" value=\"{&quot;out_trade_no&quot;:&quot;152385783854886384445&quot;,&quot;total_amount&quot;:&quot;0.1&quot;,&quot;subject&quot;:&quot;lottery&quot;,&quot;body&quot;:&quot;account&quot;,&quot;product_code&quot;:&quot;QUICK_WAP_WAY&quot;}\">\n" +
+                "<input type=\"submit\" value=\"立即支付\" style=\"display:none\" >\n" +
+                "</form>\n" +
+                "<script>document.forms[0].submit();</script>";
+      // String str= getHtmlData(url);
 
+//        newWebView.loadUrl("http://blog.csdn.net/zheng_jiao/article/details/51433462");
+        //newWebView.loadDataWithBaseURL(null,url, "text/html","charset=UTF-8",null);
+
+        String urls="https://www.cp988.cn/pay/pay.html?t=1527837828301&param=dXNlcklkPTIwMTcwOTIxMTAwOTE4ODk3MjEwMDAwMDcmdG9rZW49ODNkYjU0Zjk2ZDNkYTkwYmFhYWIzMjRlZDgwZjMyZjMzZWJiNGYxNSZjaGFubmVsSWQ9MjAwMDAwNuaIjWpncumrjsil4pue76CAJg==&schemaId=201806011523470139755643&schemaType=1&openSystemBrowser=1";
+        newWebView.loadUrl(urls);
         //newWebView.scrollBy(100,10);
 
         WebSettings webSettings = newWebView.getSettings();
@@ -81,9 +92,10 @@ public class WebAsActivity extends AppCompatActivity {
         webSettings.setUseWideViewPort(true);//扩大比例的缩放
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);//自适应屏幕
         webSettings.setLoadWithOverviewMode(true);
+        newWebView.addJavascriptInterface(new JavaFuckJSInterface(), "AndroidJavaInterface");
 
-        newWebView.requestFocus();//触摸焦点起作用
-        newWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);//取消滚动条
+        //newWebView.requestFocus();//触摸焦点起作用
+        //newWebView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);//取消滚动条
 
 //        //设置了Alert才会弹出，重新onJsAlert（）方法return true可以自定义处理信息
 //        newWebView.setWebChromeClient(new WebClient());
@@ -135,6 +147,24 @@ public class WebAsActivity extends AppCompatActivity {
         });
 
 
+    }
+    class JavaFuckJSInterface {
+        //通过这个@JavascriptInterface转化成绑定的“App”对象下的同名函数，js代码可以直接调用
+        @JavascriptInterface
+        public void interactWithApp() {
+//            UtilsLog.log(data);
+            Log.e("Js", "data");
+//            System.out.print("data");
+        }
+    }
+
+
+    private String getHtmlData(String bodyHTML) {
+        String head = "<head>" +
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"> " +
+                "<style>img{max-width: 100%; width:auto; height:auto;}</style>" +
+                "</head>";
+        return "<html>" + head + "<body>" + bodyHTML + "</body></html>";
     }
 
     @SuppressLint("HandlerLeak")

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:icon="http://schemas.android.com/apk/res-auto"
+    tools:context="com.achers.ascmake.view.requestbutton.RequestButtonActivity"
+    android:orientation="vertical">
+
+
+
+    <com.achers.ascmake.view.requestbutton.RequestButton
+        android:id="@+id/end2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/reques_bg"
+        icon:request_icon_size="2dp"
+        icon:request_icon_spacing="25dp"
+        icon:request_icon_style="tick_end_circle"
+        icon:request_speed_multiplier="1.8"
+        icon:text_color="@android:color/white"
+        icon:text_default="default"
+        icon:text_failure="failure"
+        icon:text_progress="progress"
+        icon:text_success="success"
+        app:text_size="18sp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="success"
+        android:onClick="success"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.achers.ascmake.view.customstatusview.CustomStatusView
+            android:id="@+id/as_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            app:loading_color="#0000ff"
+            app:load_success_color="#00ff00"
+            app:load_failure_color="#ff0000"
+            app:progress_radius="30dp"
+            app:progress_width="1dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_init"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="加载中" />
+
+        <Button
+            android:id="@+id/btn_success"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="成功" />
+
+        <Button
+            android:id="@+id/btn_failure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="失败" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gogo"
+        android:text="go" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <com.achers.ascmake.view.requesbuttons.NewRequesButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:bt_text_default="default"
+            app:bt_text_progress="progress"
+            app:bt_text_success="success"
+            app:bt_text_failure="failure"
+            android:gravity="center"
+            android:background="@color/un_press_color"/>
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.achers.ascmake.view.XOView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/line"
+            android:paddingTop="5dp"
+            app:xo_status="1"
+            android:layout_margin="10dp"/>
+
+        <com.achers.ascmake.view.XOView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/line"
+            android:paddingTop="5dp"
+            app:xo_status="0"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+
+
+    <!--<com.achers.ascmake.view.XOView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/line"-->
+        <!--app:xo_status="1"/>-->
+</LinearLayout>

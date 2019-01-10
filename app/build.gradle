@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 ext {
     isLibrary = false
@@ -18,6 +19,16 @@ android {
                 cppFlags "-frtti -fexceptions"
             }
         }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        // 使用support.v8.renderscript
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -36,7 +47,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -50,7 +63,23 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.alibaba:fastjson:1.1.56.android'
     compile 'com.github.florent37:viewanimator:1.0.5'
-    implementation 'com.github.lygttpod:SuperTextView:2.1.6'
+//    implementation 'com.github.lygttpod:SuperTextView:2.1.6'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile(name: 'jdpayauthor-release', ext: 'aar')
 
+    //aRouter
+    implementation 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    implementation 'com.haibin:calendarview:3.4.8'
+//    compile 'com.github.addappcn:android-pickers:1.0.3'
+    implementation project(':android-pickers')
 }
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'kotlin-android-extensions'

@@ -4,9 +4,26 @@
     <string name="title_activity_ball_tocher">BallTocherActivity</string>
     <string name="man">男</string>
     <string name="woman">女</string>
+    <string name="image">image</string>
 
     <string-array name="sex">
         <item>男</item>
         <item>女</item>
+    </string-array>
+
+    <string name="details1">第(</string>
+    <string name="details2">)</string>
+    <string name="delete">删除</string>
+    <string name="place">内容:</string>
+    <string name="hint">请输入日报（必填）</string>
+
+    <string-array name="english_week_string_array">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
     </string-array>
 </resources>

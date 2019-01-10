@@ -6,12 +6,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.achers.ascmake.animator.AnimatorActivity;
+import com.achers.ascmake.bamboy.BamActivity;
+import com.achers.ascmake.proxys.Colorable;
+import com.achers.ascmake.proxys.ColorableProxy;
+import com.achers.ascmake.proxys.RedColor;
 import com.achers.ascmake.supertextviewactivity.MaterialDialogsActivity;
 import com.achers.ascmake.timeview.LTimeView;
+import com.achers.ascmake.view.requestbutton.RequestButtonActivity;
 import com.achers.ascmake.web.WebAsActivity;
 import com.achers.ascmake.web.WebChonzhiAcvitity;
 import com.achers.ascmake.web.WebsActivity;
@@ -29,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private LTimeView lTimeView;
     private TextView textss;
+    private ProgressBar p1,p2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
@@ -58,6 +67,15 @@ public class MainActivity extends AppCompatActivity {
 
         String[] ssa=getDefultNumArray(ss);
 
+
+        p1=findViewById(R.id.progress02);
+        p1.setProgressDrawable(getResources().getDrawable(R.drawable.progress_vertical_style_right));
+
+
+        p2=findViewById(R.id.progress03);
+
+        p1.setProgress(70);
+        p2.setProgress(80);
         Log.e("getSScArraysout",getSScArraysout(ssa));
 
 
@@ -150,7 +168,10 @@ public class MainActivity extends AppCompatActivity {
 
         String aaa =changeOneZX("056");
         Log.e("aaa",aaa);
-    }
+
+
+
+}
     private String changeOneZX(String ones){
         StringBuffer sb=new StringBuffer();
         for (int i=0;i<ones.length();i++){
@@ -212,18 +233,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void gets(View view) {
         // lTimeView.setStatus(Integer.parseInt(editText.getText().toString()));
-        Intent intent =new Intent(this,WebAsActivity.class);
-        startActivity(intent);
+//        Intent intent =new Intent(this,WebAsActivity.class);
+//        startActivity(intent);
+        Colorable proxy = new ColorableProxy(new RedColor()).getProxy();
+        proxy.value();
+
+        proxy.init();
     }
 
     public void recy(View view) {
         // lTimeView.setStatus(Integer.parseInt(editText.getText().toString()));
-        Intent intent =new Intent(this,RecyviewTxActivity.class);
+        Intent intent =new Intent(this,BamActivity.class);
         startActivity(intent);
     }
 
     public void web(View view){
-        Intent intent =new Intent(this, PopWin.class);
+        Intent intent =new Intent(this, RequestButtonActivity.class);
         startActivity(intent);
     }
     public void BallTocher(View view){
