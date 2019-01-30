@@ -16,6 +16,7 @@ import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 import com.achers.ascmake.calendar.CalendarViewMainActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
+import com.achers.ascmake.slidemenu.SlideMenuActivity;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.math.BigDecimal;
@@ -91,7 +92,10 @@ public class AroutActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public void goSlideMenu(View view){
+        Intent intent =new Intent(this, SlideMenuActivity.class);
+        startActivity(intent);
+    }
 
      /**
      * @param value 需要科学计算的数据

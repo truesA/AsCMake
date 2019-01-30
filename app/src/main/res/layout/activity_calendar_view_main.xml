@@ -41,6 +41,8 @@
         app:week_background="#fff"
         app:month_view_show_mode="mode_only_current"
         app:week_text_color="#111"
+        app:week_line_background="#CFCFCF"
+        app:day_text_size="12sp"
         />
 
 

@@ -80,7 +80,9 @@
         <!-- <activity android:name=".arout.AroutActivity"></activity> -->
         <activity android:name=".MainActivity" />
         <activity android:name=".recyclers.RecyclerMainActivity" />
-        <activity android:name=".calendar.CalendarViewMainActivity"></activity>
+        <activity android:name=".calendar.CalendarViewMainActivity" />
+        <activity android:name=".slidemenu.SlideMenuActivity"
+            android:theme="@style/AppThemes"></activity>
     </application>
 
 </manifest>

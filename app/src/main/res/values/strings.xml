@@ -16,6 +16,8 @@
     <string name="delete">删除</string>
     <string name="place">内容:</string>
     <string name="hint">请输入日报（必填）</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
 
     <string-array name="english_week_string_array">
         <item>周日</item>

@@ -91,9 +91,6 @@ class CalendarViewMainActivity : AppCompatActivity() {
                 hourString.add("${i}点")
             }
         }
-//        hourString.add("2018")
-//        hourString.add("2019")
-//        hourString.add("2010")
         val hourAdapter =ArrayWheelAdapter(hourString)
         hour.setAdapter(hourAdapter)
         hour.setCanLoop(true)
