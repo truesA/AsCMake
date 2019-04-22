@@ -6,7 +6,6 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,23 +14,31 @@ import android.widget.TextView;
 import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 import com.achers.ascmake.calendar.CalendarViewMainActivity;
+import com.achers.ascmake.cameravideo1.CameraMainActivity;
+import com.achers.ascmake.collapsingLayout.CollapsingToolbarLayoutTextActivity;
+import com.achers.ascmake.notification.NotificationTextActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
+import com.achers.ascmake.seepic.SeePhotoActivity;
+import com.achers.ascmake.shoopping.ShoppingMainActivity;
 import com.achers.ascmake.slidemenu.SlideMenuActivity;
-import com.alibaba.android.arouter.launcher.ARouter;
+import com.achers.ascmake.tabs.TabLayoutMain;
+import com.achers.ascmake.vlayouts.VLayoutDemo;
+import com.achers.ascmake.vlayouts.vdemo.ExVlayoutActivity;
 
 import java.math.BigDecimal;
 
 public class AroutActivity extends AppCompatActivity {
     EditText editText;
     ImageView imageview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arout);
 
-        TextView textView =findViewById(R.id.text_html);
-         imageview =findViewById(R.id.iv_f);
-         editText =findViewById(R.id.et);
+        TextView textView = findViewById(R.id.text_html);
+        imageview = findViewById(R.id.iv_f);
+        editText = findViewById(R.id.et);
 //        String value ="<p>rnt<span style=\\\"font-family:sans-serif;font-size:16px;\\\"><span style=\\\"font-family:sans-serif;font-size:16px;\\\"><span style=\\\"font-family:sans-serif;font-size:16px;\\\"><span style=\\\"font-family:sans-serif;font-size:16px;\\\">日升昌票号的前身是西裕成颜料庄，总庄设在平遥，并在北京崇文门外设有分庄。清嘉庆末年，由于社会商品货币经济的发展，埠际间货币流通量大增，而过去的起标运银由于很不安全，已 不能适应新形势的需要，西裕成颜料庄首先在京、晋间试行汇兑办法，结果效果很好，便开始兼营汇兑业。
 // 道光初年，西裕成颜料庄正式更名为日升昌票号，专营汇兑山西平遥日升昌票号。 日
 // 升昌位于平遥城内西大街路南。票号旧址至今保存完好。坐南朝北，并列两院，南北
@@ -54,7 +61,7 @@ public class AroutActivity extends AppCompatActivity {
 //
 //
 //        textView.setText(Html.fromHtml(value));
-        String values="\"<span  style=\\\"font-size: 14px;color:#F8A653;padding:3px 8px;border:1px solid #F8A653;display: inline-block;border-radius: 3px ;\\\">投票</span>\"";
+        String values = "\"<span  style=\\\"font-size: 14px;color:#F8A653;padding:3px 8px;border:1px solid #F8A653;display: inline-block;border-radius: 3px ;\\\">投票</span>\"";
         textView.setText(Html.fromHtml(values));
 
 
@@ -72,10 +79,8 @@ public class AroutActivity extends AppCompatActivity {
     }
 
 
-
-
-    public void goArout(View view){
-        Intent intent =new Intent(this, RecyclerMainActivity.class);
+    public void goArout(View view) {
+        Intent intent = new Intent(this, RecyclerMainActivity.class);
         startActivity(intent);
 //        ARouter.getInstance()
 //                .build("/tests/test")
@@ -87,43 +92,83 @@ public class AroutActivity extends AppCompatActivity {
 
     }
 
-    public void goCalendarView(View view){
-        Intent intent =new Intent(this, CalendarViewMainActivity.class);
+    public void goCalendarView(View view) {
+        Intent intent = new Intent(this, CalendarViewMainActivity.class);
         startActivity(intent);
     }
 
-    public void goSlideMenu(View view){
-        Intent intent =new Intent(this, SlideMenuActivity.class);
+    public void goSlideMenu(View view) {
+        Intent intent = new Intent(this, SlideMenuActivity.class);
         startActivity(intent);
     }
 
-     /**
+    public void goSeePic(View view) {
+        Intent intent = new Intent(this, SeePhotoActivity.class);
+        startActivity(intent);
+    }
+
+    public void goVLayout(View view) {
+        Intent intent = new Intent(this, VLayoutDemo.class);
+        startActivity(intent);
+    }
+
+
+    public void goVLayoutDemo2(View view) {
+        Intent intent = new Intent(this, ExVlayoutActivity.class);
+        startActivity(intent);
+    }
+
+    public void goTabLayout(View view) {
+        Intent intent = new Intent(this, TabLayoutMain.class);
+        startActivity(intent);
+    }
+
+    public void CkRecyclerActivity(View view) {
+        Intent intent = new Intent(this, ShoppingMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void Notification(View view) {
+        Intent intent = new Intent(this, NotificationTextActivity.class);
+        startActivity(intent);
+    }
+
+    public void CollapsingToolbarLayout(View view) {
+        Intent intent = new Intent(this, CollapsingToolbarLayoutTextActivity.class);
+        startActivity(intent);
+    }
+
+    public void video(View view) {
+        Intent intent = new Intent(this, CameraMainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
      * @param value 需要科学计算的数据
      * @param digit 保留的小数位
-     * @return
-     * 功能：四舍六入五成双计算法
+     * @return 功能：四舍六入五成双计算法
      */
-    public static String sciCal(double value, int digit){
+    public static String sciCal(double value, int digit) {
         String result = "-999";
         try {
             double ratio = Math.pow(10, digit);
             double _num = value * ratio;
-                    //* ratio;
+            //* ratio;
             double mod = _num % 1;
             double integer = Math.floor(_num);
             double returnNum;
-            if(mod > 0.5){
-                returnNum=(integer + 1) / ratio;
-                       // /
-            }else if(mod < 0.5){
-                returnNum=integer/ ratio;
-                        //
-            }else{
-                returnNum=(integer % 2 == 0 ? integer : integer + 1);
+            if (mod > 0.5) {
+                returnNum = (integer + 1) / ratio;
+                // /
+            } else if (mod < 0.5) {
+                returnNum = integer / ratio;
+                //
+            } else {
+                returnNum = (integer % 2 == 0 ? integer : integer + 1);
                 // ratio;
             }
             BigDecimal bg = new BigDecimal(returnNum);
-            result = bg.setScale((int)digit, BigDecimal.ROUND_HALF_UP).toString();
+            result = bg.setScale((int) digit, BigDecimal.ROUND_HALF_UP).toString();
         } catch (RuntimeException e) {
             throw e;
         }

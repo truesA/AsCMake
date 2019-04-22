@@ -11,7 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.achers.ascmake.R;
+import com.achers.ascmake.slidemenu.adapter.FriendAdapter;
+import com.achers.ascmake.slidemenu.adapter.FriendBean;
 import com.achers.ascmake.slidemenu.adapter.TabTwoAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**

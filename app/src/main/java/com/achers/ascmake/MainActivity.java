@@ -24,6 +24,8 @@ import com.achers.ascmake.web.WebChonzhiAcvitity;
 import com.achers.ascmake.web.WebsActivity;
 import com.tuyenmonkey.textdecorator.TextDecorator;
 
+import org.w3c.dom.Node;
+
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 //                .setSubscript("vitae")
 //                .makeTextClickable(new OnTextClickListener() {
 //                    @Override public void onClick(View view, String text) {
-//                        Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(CameraMainActivity.this, text, Toast.LENGTH_SHORT).show();
 //                    }
 //                }, false, "porta", "commodo", "tempor venenatis nulla")
 //                .setTextColor(android.R.color.holo_green_light, "porta", "commodo", "tempor venenatis nulla")
@@ -180,8 +182,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return sb.toString();
     }
-
-
     private String getchangeString(String tvResult){
         String tvResultnull="";
         if (tvResult.contains("|")){

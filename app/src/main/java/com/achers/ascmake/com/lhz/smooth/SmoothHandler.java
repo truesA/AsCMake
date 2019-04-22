@@ -21,7 +21,6 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
 
-import junit.framework.Assert;
 
 import java.lang.ref.WeakReference;
 
@@ -54,10 +53,10 @@ public class SmoothHandler extends Handler {
      * @see #setSmoothInternalPercent(float)
      */
     public void setMinInternalPercent(float minInternalPercent) {
-        Assert.assertTrue("the min internal percent must more than 0", minInternalPercent > 0);
-        Assert.assertTrue("the min internal percent must less than 1", minInternalPercent <= 1);
-        Assert.assertTrue("the min internal percent must more than the smooth internal percent",
-                minInternalPercent > this.smoothInternalPercent);
+//        Assert.assertTrue("the min internal percent must more than 0", minInternalPercent > 0);
+//        Assert.assertTrue("the min internal percent must less than 1", minInternalPercent <= 1);
+//        Assert.assertTrue("the min internal percent must more than the smooth internal percent",
+//                minInternalPercent > this.smoothInternalPercent);
         this.minInternalPercent = minInternalPercent;
     }
 
@@ -72,10 +71,10 @@ public class SmoothHandler extends Handler {
      * @see #setMinInternalPercent(float)
      */
     public void setSmoothInternalPercent(float smoothInternalPercent) {
-        Assert.assertTrue("the smooth internal percent must more than 0", minInternalPercent > 0);
-        Assert.assertTrue("the smooth internal percent must less than 0.5", minInternalPercent < 0.5);
-        Assert.assertTrue("the smooth internal percent must less than the min internal percent",
-                smoothInternalPercent < this.minInternalPercent);
+//        Assert.assertTrue("the smooth internal percent must more than 0", minInternalPercent > 0);
+//        Assert.assertTrue("the smooth internal percent must less than 0.5", minInternalPercent < 0.5);
+//        Assert.assertTrue("the smooth internal percent must less than the min internal percent",
+//                smoothInternalPercent < this.minInternalPercent);
         this.smoothInternalPercent = smoothInternalPercent;
     }
 
@@ -87,7 +86,7 @@ public class SmoothHandler extends Handler {
      * @param smoothIncreaseDelayMillis the delay of increase duration, default 1ms
      */
     public void setSmoothIncreaseDelayMillis(int smoothIncreaseDelayMillis) {
-        Assert.assertTrue("the delay of increase duration must more than 0", minInternalPercent > 0);
+//        Assert.assertTrue("the delay of increase duration must more than 0", minInternalPercent > 0);
         this.smoothIncreaseDelayMillis = smoothIncreaseDelayMillis;
     }
 

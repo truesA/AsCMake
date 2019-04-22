@@ -2,9 +2,12 @@ package com.achers.ascmake;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.didichuxing.doraemonkit.DoraemonKit;
+import com.didichuxing.doraemonkit.kit.webdoor.WebDoorManager;
 
 
 /**
@@ -23,12 +26,24 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        context=this;
-
+        context = this;
+        MultiDex.install(this);
         ARouter.openLog();     // 打印日志
         ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
 
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
+
+
+        DoraemonKit.install(this);
+
+        // H5任意门功能需要，非必须
+        DoraemonKit.setWebDoorCallback(new WebDoorManager.WebDoorCallback() {
+            @Override
+            public void overrideUrlLoading(String s) {
+                // 使用自己的H5容器打开这个链接
+            }
+        });
+
 
 //        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
 //
@@ -51,7 +66,7 @@ public class App extends Application {
     /**
      * 获取应用上下文对象
      */
-    public static Context getAppContext(){
+    public static Context getAppContext() {
         return context;
     }
 

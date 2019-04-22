@@ -5,7 +5,13 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.Button
+import android.widget.Toast
 import com.achers.ascmake.R
+import com.achers.ascmake.arout.SlideBackActivity
+import com.achers.ascmake.arout.slide.SlideBack
+import com.achers.ascmake.arout.slide.callback.SlideBackCallBack
+
+
 
 /**
  * Created on 2018/12/20 09:55
@@ -26,6 +32,12 @@ class RecyclerMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recycler_add_layout)
+
+
+        // 在需要滑动返回的Activity中注册，最好但非必须在onCreate中
+        SlideBack.register(this, true) {
+            finish()
+        }
 
         datas = ArrayList()
         datas!!.add(ItemBean())
@@ -56,7 +68,9 @@ class RecyclerMainActivity : AppCompatActivity() {
 //            adapterEx.notifyDataSetChanged()
         }
     }
-
-
+    override fun onDestroy() {
+        super.onDestroy()
+        SlideBack.unregister(this)
+    }
 
 }

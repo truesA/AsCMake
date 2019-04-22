@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.achers.ascmake.tabs.SlidingTabLayout
+        android:id="@+id/id_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        app:tab_slide_bitmap_setting="true"
+        app:tab_slide_bitmap_width="40dp"
+        app:tab_slide_bitmap_height="2dp"
+        app:tab_slide_text_size="15sp"
+        app:tab_slide_indicator_visible_count="5"
+        app:tab_slide_style_bitmap_src="@drawable/ic_indicator"
+        app:tab_slide_text_color_normal="@color/base_start_color_pressed"
+        app:tab_slide_text_color_selected="@color/wpay"
+        android:scrollbars="none">
+
+    </com.achers.ascmake.tabs.SlidingTabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_vp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+         >
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

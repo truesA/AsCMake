@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -90,4 +90,19 @@
         <item name="contentInsetStart">0dp</item>
         <item name="contentInsetEnd">0dp</item>
     </style>
+
+    <style name="DragPhotoDialog" parent="Base.Theme.AppCompat.Dialog">
+        <!--去掉dialog的content默认灰色背景,如果给@null在某些SDK会设置默认的颜色，所以指明透明色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--去掉dialog的默认灰色阴影层-->
+        <item name="android:backgroundDimEnabled" tools:ignore="NewApi">false</item>
+    </style>
+
+
+    <declare-styleable name="LineLayout">
+        <!--两个View之间的间距 ：值越小就越近，越大就越远-->
+        <attr name="lineViewMarginRate" format="float" />
+        <!--View的层次关系，true:前面的在上，false:后面的在上-->
+        <attr name="lineIsReverse" format="boolean" />
+    </declare-styleable>
 </resources>

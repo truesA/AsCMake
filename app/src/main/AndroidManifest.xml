@@ -10,6 +10,27 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -19,6 +40,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
+
+        <activity android:name=".recyclerck.CkRecyclerActivity" />
+        <activity android:name=".notification.NotificationTextActivity" />
+        <activity android:name=".vlayouts.VLayoutDemo" />
         <activity android:name=".arout.AroutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,11 +77,8 @@
         <activity android:name=".supertextviewactivity.MaterialDialogsActivity" />
         <activity android:name=".bamboy.BamActivity" />
         <activity android:name=".animator.AnimatorActivity" />
-        <activity android:name=".view.requestbutton.RequestButtonActivity" />
-        <!-- <activity android:name=".proxys.web.ProxyActivity" /> -->
-        <activity android:name=".proxys.web.ProxyWebActivity" />
-        <!-- <activity android:name=".jdpay.JDPayActivity"></activity> -->
-
+        <activity android:name=".view.requestbutton.RequestButtonActivity" /> <!-- <activity android:name=".proxys.web.ProxyActivity" /> -->
+        <activity android:name=".proxys.web.ProxyWebActivity" /> <!-- <activity android:name=".jdpay.JDPayActivity"></activity> -->
         <activity
             android:name="com.jdpaysdk.author.AuthorActivity"
             android:exported="true">
@@ -73,16 +95,40 @@
         <activity
             android:name="com.jdpaysdk.author.browser.BrowserActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
-        <!-- <activity android:name=".components.ComponentActivity"></activity> -->
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".components.ComponentActivity"></activity> -->
         <activity android:name=".components.beatweb.BaseActivity" />
-        <activity android:name=".components.beatweb.BaseWebActivity" />
-        <!-- <activity android:name=".arout.AroutActivity"></activity> -->
+        <activity android:name=".components.beatweb.BaseWebActivity" /> <!-- <activity android:name=".arout.AroutActivity"></activity> -->
         <activity android:name=".MainActivity" />
         <activity android:name=".recyclers.RecyclerMainActivity" />
         <activity android:name=".calendar.CalendarViewMainActivity" />
-        <activity android:name=".slidemenu.SlideMenuActivity"
-            android:theme="@style/AppThemes"></activity>
+        <activity
+            android:name=".slidemenu.SlideMenuActivity"
+            android:theme="@style/AppThemes" />
+        <activity android:name=".seepic.SeePhotoActivity" />
+        <activity android:name=".lineLayout.LineMainActivity" />
+        <activity android:name=".vlayouts.vdemo.ExVlayoutActivity" />
+        <activity android:name=".tabs.TabLayoutMain" />
+        <activity android:name=".tabs.tabEx.TabLayoutMainEX" />
+        <activity android:name=".shoopping.ShoppingMainActivity" />
+        <activity
+            android:name=".collapsingLayout.CollapsingToolbarLayoutTextActivity"
+            android:theme="@style/AppThemes"/>
+
+        <activity android:name=".cameravideo1.CameraMainActivity" />
+        <activity android:name=".cameravideo1.RecordVideoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.achers.ascmake.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
     </application>
 
 </manifest>

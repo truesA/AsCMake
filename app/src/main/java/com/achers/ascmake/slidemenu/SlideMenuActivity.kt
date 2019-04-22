@@ -1,35 +1,23 @@
 package com.achers.ascmake.slidemenu
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View
-import com.achers.ascmake.R
 import android.widget.ArrayAdapter
-import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import com.achers.ascmake.R
+import com.achers.ascmake.slidemenu.adapter.SimpleViewPagerAdapter
+import com.achers.ascmake.slidemenu.ui.ChatFragment
+import com.achers.ascmake.slidemenu.ui.FriendFragment
+import com.achers.ascmake.slidemenu.ui.TabOneFragment
+import com.achers.ascmake.slidemenu.ui.TabTwoFragment
 import kotlinx.android.synthetic.main.custom_drawerlayout.*
-import android.view.WindowManager
-import android.os.Build
-import kotlinx.android.synthetic.main.activity_slide_menu.*
-import com.jkb.slidemenu.SlideMenuLayout
-import com.jkb.slidemenu.OnSlideChangedListener
-import com.achers.ascmake.slidemenu.adapter.ContentAdapter
-import android.support.design.widget.TabLayout
-import android.support.v4.app.FragmentActivity
-import android.support.v4.view.ViewPager
-import com.achers.ascmake.slidemenu.adapter.SlideLeftAdapter
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.util.Log
-import com.achers.ascmake.R.id.*
-import com.achers.ascmake.slidemenu.adapter.SlideRightMenuAdapter
-
-
 
 
 class SlideMenuActivity : AppCompatActivity() {
@@ -42,11 +30,23 @@ class SlideMenuActivity : AppCompatActivity() {
     private lateinit var arrayAdapter: ArrayAdapter<String>
     private lateinit var arrayAdapterList: ArrayAdapter<String>
     private lateinit var ivRunningMan: TextView
+    private var fragmentList: java.util.ArrayList<Fragment> = java.util.ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_slide_menu)
         findViews()
+
+
+
+
+        fragmentList.add(ChatFragment())
+        fragmentList.add(TabTwoFragment())
+        fragmentList.add(FriendFragment())
+        fragmentList.add(TabOneFragment())
+        viewpage.adapter=SimpleViewPagerAdapter(supportFragmentManager,fragmentList)
+        viewpage.offscreenPageLimit=4
+
         toolbar.setTitle("Toolbar");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
 
@@ -72,6 +72,8 @@ class SlideMenuActivity : AppCompatActivity() {
 
         arrayAdapterList = ArrayAdapter(this, android.R.layout.simple_list_item_1, listData)
         lv_list.adapter=arrayAdapterList
+
+
     }
 
     private fun findViews() {
