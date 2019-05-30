@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 
 /**
@@ -33,8 +32,7 @@ public class Camera2MainActivity  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera_main2
-        );
+        setContentView(R.layout.activity_camera_main2);
 
         mContext = this;
         findViewById(R.id.text)
@@ -47,7 +45,7 @@ public class Camera2MainActivity  extends AppCompatActivity {
         findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,MyCameraActivity.class));
+                startActivity(new Intent(Camera2MainActivity.this,MyCameraActivity.class));
             }
         });
     }

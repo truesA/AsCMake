@@ -164,4 +164,14 @@
     </declare-styleable>
 
 
+    <!--注意这里的name要和自定义View的名称一致，不然在布局文件中无法引用-->
+    <declare-styleable name="SortScrollbarsView">
+        <attr name="scroll_color" format="color" />
+        <attr name="scroll_bg_color" format="color" />
+        <attr name="scroll_height" format="dimension" />
+        <attr name="scroll_bg_width" format="dimension" />
+        <!--缩放的倍数-->
+        <attr name="scroll_radio" format="float" />
+    </declare-styleable>
+
 </resources>

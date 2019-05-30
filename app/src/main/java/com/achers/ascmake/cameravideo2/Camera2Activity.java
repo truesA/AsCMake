@@ -12,9 +12,13 @@ public class Camera2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera2);
         if (null == savedInstanceState) {
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera2BasicFragment.newInstance())
-                    .commit();
+//            getFragmentManager().beginTransaction()
+//                    .replace(R.id.container, Camera2BasicFragment.newInstance())
+//                    .commit();
+
+//            getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.container, Camera2VideoFragment.Companion.newInstance())
+//                    .commit();
         }
     }
 }

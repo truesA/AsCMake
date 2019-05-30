@@ -15,6 +15,8 @@ import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 import com.achers.ascmake.calendar.CalendarViewMainActivity;
 import com.achers.ascmake.cameravideo1.CameraMainActivity;
+import com.achers.ascmake.cameravideo2.Camera2Activity;
+import com.achers.ascmake.cameravideo2.Camera2MainActivity;
 import com.achers.ascmake.collapsingLayout.CollapsingToolbarLayoutTextActivity;
 import com.achers.ascmake.notification.NotificationTextActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
@@ -139,7 +141,12 @@ public class AroutActivity extends AppCompatActivity {
     }
 
     public void video(View view) {
-        Intent intent = new Intent(this, CameraMainActivity.class);
+//        Intent intent = new Intent(this, CameraMainActivity.class);
+//        startActivity(intent);
+//        Intent intent = new Intent(this, Camera2MainActivity.class);
+//        startActivity(intent);
+
+        Intent intent = new Intent(this, Camera2Activity.class);
         startActivity(intent);
     }
 

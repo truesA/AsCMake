@@ -39,9 +39,8 @@ class SlideMenuActivity : AppCompatActivity() {
 
 
 
-
-        fragmentList.add(ChatFragment())
         fragmentList.add(TabTwoFragment())
+        fragmentList.add(ChatFragment())
         fragmentList.add(FriendFragment())
         fragmentList.add(TabOneFragment())
         viewpage.adapter=SimpleViewPagerAdapter(supportFragmentManager,fragmentList)

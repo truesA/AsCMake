@@ -129,6 +129,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
+
+
+        <activity android:name=".cameravideo2.Camera2MainActivity"/>
+        <activity android:name=".cameravideo2.MyCameraActivity"/>
+        <activity android:name=".cameravideo2.Camera2Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

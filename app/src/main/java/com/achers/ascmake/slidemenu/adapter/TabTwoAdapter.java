@@ -36,7 +36,7 @@ public class TabTwoAdapter extends RecyclerView.Adapter<TabTwoAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 20;
+        return 10;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

@@ -62,4 +62,7 @@
     <color name="color_666666">#666666</color>
     <color name="gray_feedback">#DFDFDF</color>
     <color name="color_ff8523">#ff8523</color>
+    <color name="control_background">#cc4285f4</color>
+
+
 </resources>

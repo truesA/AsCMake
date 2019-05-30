@@ -40,6 +40,8 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.achers.ascmake.R;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
