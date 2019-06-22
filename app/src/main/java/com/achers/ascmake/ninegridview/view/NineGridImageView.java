@@ -70,6 +70,7 @@ public class NineGridImageView<T> extends ViewGroup {
         if (mImgDataList != null && mImgDataList.size() > 0) {
             if (mImgDataList.size() == 1 && mSingleImgSize != -1) {
                 mGridSize = mSingleImgSize > totalWidth ? totalWidth : mSingleImgSize;
+//                height = mGridSize * mRowCount + mGap * (mRowCount - 1) + getPaddingTop() + getPaddingBottom();
             } else {
                 mImageViewList.get(0).setScaleType(ImageView.ScaleType.CENTER_CROP);
                 mGridSize = (totalWidth - mGap * (mColumnCount - 1)) / mColumnCount;
@@ -209,25 +210,48 @@ public class NineGridImageView<T> extends ViewGroup {
             ImageView childrenView = (ImageView) getChildAt(i);
             switch (mSpanType) {
                 case TOPCOLSPAN:    //3行3列,首行跨2行3列
+//                    if (i == 0) {
+//                        left = getPaddingLeft();
+//                        top = getPaddingTop();
+//                        right = left + mGridSize * 3 + mGap * 2;
+//                        bottom = top + mGridSize * 2 + mGap;
+//                    } else if (i == 1) {
+//                        left = getPaddingLeft();
+//                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
+//                        right = left + mGridSize;
+//                        bottom = top + mGridSize;
+//                    } else if (i == 2) {
+//                        left = getPaddingLeft() + mGridSize + mGap;
+//                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
+//                        right = left + mGridSize;
+//                        bottom = top + mGridSize;
+//                    } else {
+//                        left = getPaddingLeft() + mGridSize * 2 + mGap * 2;
+//                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
+//                        right = left + mGridSize;
+//                        bottom = top + mGridSize;
+//                    }
+//                    childrenView.layout(left, top, right, bottom);
+//                    break;
                     if (i == 0) {
                         left = getPaddingLeft();
                         top = getPaddingTop();
-                        right = left + mGridSize * 3 + mGap * 2;
-                        bottom = top + mGridSize * 2 + mGap;
+                        right = left + mGridSize + mGap;
+                        bottom = top + mGridSize;
                     } else if (i == 1) {
-                        left = getPaddingLeft();
-                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
-                        right = left + mGridSize;
+                        left = getPaddingLeft() + mGridSize + mGap * 2;
+                        top = getPaddingTop();
+                        right = left + mGridSize + mGap;
                         bottom = top + mGridSize;
                     } else if (i == 2) {
-                        left = getPaddingLeft() + mGridSize + mGap;
-                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
-                        right = left + mGridSize;
+                        left = getPaddingLeft();
+                        top = getPaddingTop() + mGridSize + mGap;
+                        right = left + mGridSize + mGap;
                         bottom = top + mGridSize;
                     } else {
-                        left = getPaddingLeft() + mGridSize * 2 + mGap * 2;
-                        top = getPaddingTop() + mGridSize * 2 + mGap * 2;
-                        right = left + mGridSize;
+                        left = getPaddingLeft() + mGridSize + mGap * 2;
+                        top = getPaddingTop() + mGridSize + mGap;
+                        right = left + mGridSize + mGap;
                         bottom = top + mGridSize;
                     }
                     childrenView.layout(left, top, right, bottom);
@@ -544,6 +568,9 @@ public class NineGridImageView<T> extends ViewGroup {
                     gridParam[1] = imagesSize / 2 + imagesSize % 2;
                     break;
             }
+        } else if (imagesSize == 9) {
+            gridParam[0] = 3;
+            gridParam[1] = 3;
         } else {
             gridParam[0] = imagesSize / 3 + (imagesSize % 3 == 0 ? 0 : 1);
             gridParam[1] = 3;
@@ -660,7 +687,12 @@ public class NineGridImageView<T> extends ViewGroup {
         int[] gridParam = new int[2];
         switch (showStyle) {
             case STYLE_FILL:
-                generatUnitRowAndColumnForSpanType(imagesSize, gridParam);
+                if (imagesSize == 4) {
+                    gridParam[0] = 2;
+                    gridParam[1] = 3;
+                } else {
+                    generatUnitRowAndColumnForSpanType(imagesSize, gridParam);
+                }
                 break;
             default:
             case STYLE_GRID:
