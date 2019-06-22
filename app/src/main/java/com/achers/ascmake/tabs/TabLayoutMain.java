@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.Window;
 
 import com.achers.ascmake.R;
+import com.nshmura.recyclertablayout.RecyclerTabLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class TabLayoutMain extends FragmentActivity {
     private List<Fragment> mTabContents = new ArrayList<Fragment>();
     private FragmentPagerAdapter mAdapter;
     private ViewPager mViewPager;
-    private List<String> mDatas = Arrays.asList("Tab1", "Tab2", "Tab3", "Tab4");
+    private List<String> mDatas = Arrays.asList("Tab1", "Tab2", "Tab3", "Tab4","Tab1", "Tab2", "Tab3", "Tab4");
 
     private SlidingTabLayout mTabLayout;
 
@@ -38,10 +39,23 @@ public class TabLayoutMain extends FragmentActivity {
         initView();
         initDatas();
         //设置Tab上的标题
-        mTabLayout.setData(mDatas);
+//        mTabLayout.setData(mDatas);
         mViewPager.setAdapter(mAdapter);
-        //设置关联的ViewPager
-        mTabLayout.setViewPager(mViewPager, 0);
+//        //设置关联的ViewPager
+//        mTabLayout.setViewPager(mViewPager, 0);
+        ArrayList<String> list =new ArrayList<>();
+
+        list.add("tab1");
+        list.add("tab2tab2tab2tab2tab2");
+        list.add("tab3");
+        list.add("tab4tab2tab2");
+        list.add("tab1");
+        list.add("tab2tab2tab2");
+        list.add("tab3tab2tab2");
+        list.add("tab4");
+        RecyclerTabLayout recyclerTabLayout = (RecyclerTabLayout) findViewById(R.id.recycler_tab_layout);
+        DemoCustomView01Adapter adapter =new DemoCustomView01Adapter(mViewPager,list);
+        recyclerTabLayout.setUpWithAdapter(adapter);
     }
 
     private void initDatas() {

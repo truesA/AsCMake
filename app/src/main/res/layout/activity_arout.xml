@@ -1,130 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.achers.ascmake.arout.AroutActivity">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goArout"
-        android:text="go"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="116dp" />
-
-
-    <TextView
-        android:id="@+id/text_html"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="245dp" />
-
-    <EditText
-        android:id="@+id/et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="111"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="232dp" />
-
-
-    <ImageView
-        android:id="@+id/iv_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/head_default"
-        android:transitionName="@string/image"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goCalendarView"
-        android:text="CalendarView"
-         />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goSlideMenu"
-        android:text="侧滑菜单"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goSeePic"
-        android:text="查看图片优化"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goVLayout"
-        android:text="VLayout"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goVLayoutDemo2"
-        android:text="VLayoutDemo2封装"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="goTabLayout"
-        android:text="TabLayout"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CkRecyclerActivity"
-        android:text="購物車"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Notification"
-        android:text="Notification 8.0"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="CollapsingToolbarLayout"
-        android:text="CollapsingToolbarLayout"
-        />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="video"
-        android:text="Camera"
-        />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="100dp"
-        android:layout_margin="15dp"
-        android:layout_gravity="center"
-        android:background="@drawable/shadow_white">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.achers.ascmake.arout.AroutActivity">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goArout"
+            android:text="go"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+
+        <TextView
+            android:id="@+id/text_html"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="245dp" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="111"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/head_default"
+            android:transitionName="@string/image" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goCalendarView"
+            android:text="CalendarView" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goSlideMenu"
+            android:text="侧滑菜单" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goSeePic"
+            android:text="查看图片优化" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goVLayout"
+            android:text="VLayout" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goVLayoutDemo2"
+            android:text="VLayoutDemo2封装" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTabLayout"
+            android:text="TabLayout" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CkRecyclerActivity"
+            android:text="購物車" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Notification"
+            android:text="Notification 8.0" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CollapsingToolbarLayout"
+            android:text="CollapsingToolbarLayout" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="video"
+            android:text="Camera" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="twoRecycler"
+            android:text="双列表分类" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="NineGridView"
+            android:text="九宫图展示" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/shadow_white"
+            android:minHeight="100dp"></LinearLayout>
+
+
     </LinearLayout>
-
-
-</LinearLayout>
 </android.support.v4.widget.NestedScrollView>

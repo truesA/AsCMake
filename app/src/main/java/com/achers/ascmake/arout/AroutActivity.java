@@ -14,10 +14,9 @@ import android.widget.TextView;
 import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 import com.achers.ascmake.calendar.CalendarViewMainActivity;
-import com.achers.ascmake.cameravideo1.CameraMainActivity;
 import com.achers.ascmake.cameravideo2.Camera2Activity;
-import com.achers.ascmake.cameravideo2.Camera2MainActivity;
 import com.achers.ascmake.collapsingLayout.CollapsingToolbarLayoutTextActivity;
+import com.achers.ascmake.ninegridview.NineMainActivity;
 import com.achers.ascmake.notification.NotificationTextActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
 import com.achers.ascmake.seepic.SeePhotoActivity;
@@ -149,6 +148,21 @@ public class AroutActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Camera2Activity.class);
         startActivity(intent);
     }
+
+    public void twoRecycler(View view){
+        Intent intent = new Intent(this, com.achers.ascmake.gangedrecyclerview.MainActivity.class);
+        startActivity(intent);
+    }
+
+
+
+ public void NineGridView(View view){
+        Intent intent = new Intent(this, NineMainActivity.class);
+        startActivity(intent);
+    }
+
+
+
 
     /**
      * @param value 需要科学计算的数据

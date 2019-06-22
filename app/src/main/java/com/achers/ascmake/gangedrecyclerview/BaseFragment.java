@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.achers.ascmake.R;
+
 /**
  * author pangchao
  * created on 2017/5/20
