@@ -11,6 +11,12 @@
         android:orientation="vertical"
         tools:context="com.achers.ascmake.arout.AroutActivity">
 
+
+        <com.achers.ascmake.arout.ArcHeaderView
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,6 +123,19 @@
             android:layout_height="wrap_content"
             android:onClick="NineGridView"
             android:text="九宫图展示" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="VideoCompressor"
+            android:text="视频压缩" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="VideoPlay"
+            android:text="饺子播放器" />
+
 
         <LinearLayout
             android:layout_width="match_parent"

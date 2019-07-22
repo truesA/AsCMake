@@ -15,7 +15,9 @@ import com.achers.ascmake.MainActivity;
 import com.achers.ascmake.R;
 import com.achers.ascmake.calendar.CalendarViewMainActivity;
 import com.achers.ascmake.cameravideo2.Camera2Activity;
+import com.achers.ascmake.circlefriends.main.MomentListActivity;
 import com.achers.ascmake.collapsingLayout.CollapsingToolbarLayoutTextActivity;
+import com.achers.ascmake.jzvideo.JzVideoActivity;
 import com.achers.ascmake.ninegridview.NineMainActivity;
 import com.achers.ascmake.notification.NotificationTextActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
@@ -23,8 +25,11 @@ import com.achers.ascmake.seepic.SeePhotoActivity;
 import com.achers.ascmake.shoopping.ShoppingMainActivity;
 import com.achers.ascmake.slidemenu.SlideMenuActivity;
 import com.achers.ascmake.tabs.TabLayoutMain;
+import com.achers.ascmake.videocompressor.VideoCompressorActivity;
 import com.achers.ascmake.vlayouts.VLayoutDemo;
 import com.achers.ascmake.vlayouts.vdemo.ExVlayoutActivity;
+import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
+import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 import java.math.BigDecimal;
 
@@ -149,51 +154,59 @@ public class AroutActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void twoRecycler(View view){
+    public void twoRecycler(View view) {
         Intent intent = new Intent(this, com.achers.ascmake.gangedrecyclerview.MainActivity.class);
         startActivity(intent);
     }
 
 
+    public void NineGridView(View view) {
+        Intent intent = new Intent(this, MomentListActivity.class);
+        startActivity(intent);
+    }
 
- public void NineGridView(View view){
-        Intent intent = new Intent(this, NineMainActivity.class);
+    public void VideoCompressor(View view) {
+        Intent intent = new Intent(this, VideoCompressorActivity.class);
+        startActivity(intent);
+    }
+
+    public void VideoPlay(View view) {
+        Intent intent = new Intent(this, JzVideoActivity.class);
         startActivity(intent);
     }
 
 
-
-
-    /**
-     * @param value 需要科学计算的数据
-     * @param digit 保留的小数位
-     * @return 功能：四舍六入五成双计算法
-     */
-    public static String sciCal(double value, int digit) {
-        String result = "-999";
-        try {
-            double ratio = Math.pow(10, digit);
-            double _num = value * ratio;
-            //* ratio;
-            double mod = _num % 1;
-            double integer = Math.floor(_num);
-            double returnNum;
-            if (mod > 0.5) {
-                returnNum = (integer + 1) / ratio;
-                // /
-            } else if (mod < 0.5) {
-                returnNum = integer / ratio;
-                //
-            } else {
-                returnNum = (integer % 2 == 0 ? integer : integer + 1);
-                // ratio;
-            }
-            BigDecimal bg = new BigDecimal(returnNum);
-            result = bg.setScale((int) digit, BigDecimal.ROUND_HALF_UP).toString();
-        } catch (RuntimeException e) {
-            throw e;
-        }
-        return result;
-    }
+//
+//    /**
+//     * @param value 需要科学计算的数据
+//     * @param digit 保留的小数位
+//     * @return 功能：四舍六入五成双计算法
+//     */
+//    public static String sciCal(double value, int digit) {
+//        String result = "-999";
+//        try {
+//            double ratio = Math.pow(10, digit);
+//            double _num = value * ratio;
+//            //* ratio;
+//            double mod = _num % 1;
+//            double integer = Math.floor(_num);
+//            double returnNum;
+//            if (mod > 0.5) {
+//                returnNum = (integer + 1) / ratio;
+//                // /
+//            } else if (mod < 0.5) {
+//                returnNum = integer / ratio;
+//                //
+//            } else {
+//                returnNum = (integer % 2 == 0 ? integer : integer + 1);
+//                // ratio;
+//            }
+//            BigDecimal bg = new BigDecimal(returnNum);
+//            result = bg.setScale((int) digit, BigDecimal.ROUND_HALF_UP).toString();
+//        } catch (RuntimeException e) {
+//            throw e;
+//        }
+//        return result;
+//    }
 
 }

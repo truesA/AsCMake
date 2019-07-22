@@ -3,48 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.achers.ascmake">
 
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
     <application
         android:name=".App"
         android:allowBackup="true"
+        android:appComponentFactory="app"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:resizeableActivity="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:replace="android:allowBackup">
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:allowBackup,android:appComponentFactory"
+        tools:targetApi="m">
+
 
         <activity android:name=".recyclerck.CkRecyclerActivity" />
         <activity android:name=".notification.NotificationTextActivity" />
         <activity android:name=".vlayouts.VLayoutDemo" />
-        <activity android:name=".arout.AroutActivity">
+        <activity
+            android:name=".arout.AroutActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -112,33 +108,43 @@
         <activity android:name=".shoopping.ShoppingMainActivity" />
         <activity
             android:name=".collapsingLayout.CollapsingToolbarLayoutTextActivity"
-            android:theme="@style/AppThemes"/>
+            android:theme="@style/AppThemes" />
 
         <activity android:name=".cameravideo1.CameraMainActivity" />
-        <activity android:name=".cameravideo1.RecordVideoActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-
+        <activity
+            android:name=".cameravideo1.RecordVideoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
 
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.achers.ascmake.fileprovider"
-            android:grantUriPermissions="true"
-            android:exported="false">
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
 
 
-        <activity android:name=".cameravideo2.Camera2MainActivity"/>
-        <activity android:name=".cameravideo2.MyCameraActivity"/>
-        <activity android:name=".cameravideo2.Camera2Activity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".cameravideo2.Camera2MainActivity" />
+        <activity android:name=".cameravideo2.MyCameraActivity" />
+        <activity
+            android:name=".cameravideo2.Camera2Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <activity android:name=".gangedrecyclerview.MainActivity"/>
+        <activity android:name=".gangedrecyclerview.MainActivity" />
 
-        <activity android:name=".ninegridview.NineMainActivity"/>
+        <activity android:name=".ninegridview.NineMainActivity" />
+
+        <activity android:name=".circlefriends.main.MomentListActivity" />
+
+        <activity android:name=".videocompressor.VideoCompressorActivity" />
+        <activity android:name=".videocompressor.PreviewActivity" />
+        <activity
+            android:name=".jzvideo.JzVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

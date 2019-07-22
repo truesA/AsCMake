@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <item name="windowActionBar">false</item>
     </style>
 
 
@@ -105,4 +105,7 @@
         <!--View的层次关系，true:前面的在上，false:后面的在上-->
         <attr name="lineIsReverse" format="boolean" />
     </declare-styleable>
+
+
+
 </resources>

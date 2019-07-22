@@ -16,6 +16,8 @@ public class RcTx {
     public RcTx(String num,boolean isred){
         this.num=num;
         this.isred=isred;
+
+
     }
 
     public String getNum() {
