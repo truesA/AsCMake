@@ -397,6 +397,7 @@ public class VideoCompressorActivity extends AppCompatActivity {
 //        filePath = dest.getAbsolutePath();
         filePath = createCameraTempImageFile().getPath();
 
+
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         retriever.setDataSource(selectVideoPath);
 
@@ -419,7 +420,7 @@ public class VideoCompressorActivity extends AppCompatActivity {
                             .outHeight(outHeight)
                             .startTimeMs(startMs)
                             .endTimeMs(endMs)
-                            .bitrate((int) (bitrate * 0.2))
+                            .bitrate(bitrate / 2)
                             .progressListener(new VideoProgressListener() {
                                 @Override
                                 public void onProgress(float v) {
@@ -438,6 +439,7 @@ public class VideoCompressorActivity extends AppCompatActivity {
             }
         }).start();
     }
+
 
     /**
      * 录制视频的保存输出地址
@@ -616,7 +618,7 @@ public class VideoCompressorActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    VideoProcessor.reverseVideo(getApplicationContext(), selectVideoPath, filePath, true, null);
+                    VideoProcessor.reverseVideo(getApplicationContext(), selectVideoPath, filePath,true,null);
                     Intent intent = new Intent(VideoCompressorActivity.this, PreviewActivity.class);
                     intent.putExtra(FILEPATH, filePath);
                     startActivity(intent);

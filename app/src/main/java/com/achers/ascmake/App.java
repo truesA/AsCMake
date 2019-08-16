@@ -9,6 +9,8 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.didichuxing.doraemonkit.DoraemonKit;
 import com.didichuxing.doraemonkit.kit.webdoor.WebDoorManager;
 
+import io.microshow.rxffmpeg.RxFFmpegInvoke;
+
 
 /**
  * Create on 2017/12/28 22:27
@@ -44,6 +46,7 @@ public class App extends Application {
             }
         });
 
+        RxFFmpegInvoke.getInstance().setDebug(true);
 
 //        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
 //

@@ -20,7 +20,9 @@ import com.achers.ascmake.collapsingLayout.CollapsingToolbarLayoutTextActivity;
 import com.achers.ascmake.jzvideo.JzVideoActivity;
 import com.achers.ascmake.ninegridview.NineMainActivity;
 import com.achers.ascmake.notification.NotificationTextActivity;
+import com.achers.ascmake.notifysetting.CheckNotifyActivity;
 import com.achers.ascmake.recyclers.RecyclerMainActivity;
+import com.achers.ascmake.room.RoomActivity;
 import com.achers.ascmake.seepic.SeePhotoActivity;
 import com.achers.ascmake.shoopping.ShoppingMainActivity;
 import com.achers.ascmake.slidemenu.SlideMenuActivity;
@@ -172,6 +174,16 @@ public class AroutActivity extends AppCompatActivity {
 
     public void VideoPlay(View view) {
         Intent intent = new Intent(this, JzVideoActivity.class);
+        startActivity(intent);
+    }
+
+    public void Room(View view) {
+        Intent intent = new Intent(this, RoomActivity.class);
+        startActivity(intent);
+    }
+
+    public void checkNotify(View view) {
+        Intent intent = new Intent(this, CheckNotifyActivity.class);
         startActivity(intent);
     }
 

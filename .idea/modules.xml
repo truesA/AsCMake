@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AsCMake.iml" filepath="$PROJECT_DIR$/AsCMake.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-pickers/android-pickers.iml" filepath="$PROJECT_DIR$/android-pickers/android-pickers.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videoprocessor/videoprocessor.iml" filepath="$PROJECT_DIR$/videoprocessor/videoprocessor.iml" />
     </modules>
   </component>
 </project>

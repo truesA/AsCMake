@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -20,7 +19,6 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -33,14 +31,13 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:replace="android:allowBackup,android:appComponentFactory"
         tools:targetApi="m">
-
-
+        <activity android:name=".notifysetting.CheckNotifyActivity"></activity>
+        <activity android:name=".room.RoomActivity" />
+        <activity android:name=".ffmpeg.FFmpegActivity" />
         <activity android:name=".recyclerck.CkRecyclerActivity" />
         <activity android:name=".notification.NotificationTextActivity" />
         <activity android:name=".vlayouts.VLayoutDemo" />
-        <activity
-            android:name=".arout.AroutActivity"
-            >
+        <activity android:name=".arout.AroutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -109,12 +106,10 @@
         <activity
             android:name=".collapsingLayout.CollapsingToolbarLayoutTextActivity"
             android:theme="@style/AppThemes" />
-
         <activity android:name=".cameravideo1.CameraMainActivity" />
         <activity
             android:name=".cameravideo1.RecordVideoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -126,19 +121,14 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-
         <activity android:name=".cameravideo2.Camera2MainActivity" />
         <activity android:name=".cameravideo2.MyCameraActivity" />
         <activity
             android:name=".cameravideo2.Camera2Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity android:name=".gangedrecyclerview.MainActivity" />
-
         <activity android:name=".ninegridview.NineMainActivity" />
-
         <activity android:name=".circlefriends.main.MomentListActivity" />
-
         <activity android:name=".videocompressor.VideoCompressorActivity" />
         <activity android:name=".videocompressor.PreviewActivity" />
         <activity

@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/android-pickers" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/videoprocessor" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

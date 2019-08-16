@@ -1,1 +1,1 @@
-include ':app', ':android-pickers'
+include ':app', ':android-pickers', ':videoprocessor'

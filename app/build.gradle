@@ -10,7 +10,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.achers.ascmake"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,10 @@ android {
         // 使用support.v8.renderscript
         renderscriptTargetApi 18
         renderscriptSupportModeEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
     }
     buildTypes {
         release {
@@ -100,10 +104,21 @@ dependencies {
 
     implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
 
-    implementation 'com.github.yellowcath:VideoProcessor:2.3.3'
+//    implementation 'com.github.yellowcath:VideoProcessor:2.3.3'
     implementation 'com.github.Jay-Goo:RangeSeekBar:v1.1.0'
 
     implementation 'cn.jzvd:jiaozivideoplayer:7.0.5'
+
+    implementation 'com.github.microshow:RxFFmpeg:2.0.0'
+
+    api project(path: ':videoprocessor')
+
+
+    def room_version = "1.1.1"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
 }
 repositories {
     mavenCentral()

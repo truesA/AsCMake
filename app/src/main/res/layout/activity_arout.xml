@@ -26,6 +26,19 @@
             tools:layout_editor_absoluteY="116dp" />
 
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Room"
+            android:text="Room 数据库" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkNotify"
+            android:text="检查通知权限" />
+
+
         <TextView
             android:id="@+id/text_html"
             android:layout_width="match_parent"
